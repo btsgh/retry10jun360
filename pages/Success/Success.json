@@ -36,9 +36,7 @@
               "collectionId": "Success_Actions",
               "confirmBeforeExecute": false,
               "pluginType": "JS",
-              "jsonPathKeys": [
-                "() => {\n  getSegmentSFOpportunities.run().then(() => {\n    getSegmentSFAccounts.run();\n  });\n}"
-              ],
+              "jsonPathKeys": [],
               "timeoutInMillisecond": 10000
             },
             {
@@ -56,9 +54,7 @@
               "name": "_$getSegmentSFOpportunities$_getSegmentSFOpportunitiesModule",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
-              "jsonPathKeys": [
-                "getSegmentSFOpportunities.inputs.columns"
-              ],
+              "jsonPathKeys": [],
               "timeoutInMillisecond": 10000
             },
             {
@@ -66,9 +62,7 @@
               "name": "_$getSegmentSFUsers$_getSegmentSFUsersModule",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
-              "jsonPathKeys": [
-                "getSegmentSFUsers.inputs.columns"
-              ],
+              "jsonPathKeys": [],
               "timeoutInMillisecond": 10000
             }
           ],

@@ -51,6 +51,17 @@
           ],
           [
             {
+              "id": "Sales_getSegmentSFContacts",
+              "name": "getSegmentSFContacts",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "`'${Utils.getAllAccountIds()?.join(`', '`)}'`",
+                "Constants.ContactQueryFields.join(\", \")"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
               "id": "Sales_getSegmentSFOpportunities",
               "name": "getSegmentSFOpportunities",
               "confirmBeforeExecute": false,
@@ -64,31 +75,6 @@
           ],
           [
             {
-              "id": "Sales_getSegmentSFEventsByOppId",
-              "name": "getSegmentSFEventsByOppId",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [
-                "SFTableData.selectedRow.Id"
-              ],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
-              "id": "Sales_getSegmentSFContacts",
-              "name": "getSegmentSFContacts",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [
-                "`'${Utils.getAllAccountIds()?.join(`', '`)}'`",
-                "Constants.ContactQueryFields.join(\", \")"
-              ],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
               "id": "Sales_getSegmentSFAccounts",
               "name": "getSegmentSFAccounts",
               "confirmBeforeExecute": false,
@@ -96,6 +82,16 @@
               "jsonPathKeys": [
                 "`'${Utils.getAllAccountIds()?.join(`', '`)}'`",
                 "Constants.AccountQueryFields.join(\", \")"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Sales_getSegmentSFEventsByOppId",
+              "name": "getSegmentSFEventsByOppId",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "SFTableData.selectedRow.Id"
               ],
               "timeoutInMillisecond": 10000
             }
